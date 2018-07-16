@@ -6,7 +6,7 @@
 /*   By: jadawson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/26 19:00:04 by jadawson          #+#    #+#             */
-/*   Updated: 2018/07/13 21:11:52 by jadawson         ###   ########.fr       */
+/*   Updated: 2018/07/15 23:49:36 by jadawson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,8 +113,8 @@ int		type_check(char *type, va_list ap)
 	type = get_length(type, &stuff);
 	while (++i < COUNT_TYPES)
 	{
-		if (dispatch[i].type_find == *type)
-			send = dispatch[i].c(ap, &stuff);
+		if (g_dispatch[i].type_find == *type)
+			send = g_dispatch[i].c(ap, &stuff);
 	}
 	return (send);
 }

@@ -6,7 +6,7 @@
 /*   By: jadawson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/04 19:54:16 by jadawson          #+#    #+#             */
-/*   Updated: 2018/07/12 15:07:31 by jadawson         ###   ########.fr       */
+/*   Updated: 2018/07/15 23:31:51 by jadawson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,5 @@ int				ptr_is_length(char c);
 int				ptr_str_is_num(char c);
 void			print_plus_or_space(t_fwpl *modder);
 void			ft_putstr_bc(char const *s, int *bc);
-//int				check_width_valid(int id, int *bc, int len, t_fwpl *modder);
 
 #endif
