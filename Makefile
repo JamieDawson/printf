@@ -6,7 +6,7 @@
 #    By: jadawson <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/06/15 16:05:37 by jadawson          #+#    #+#              #
-#    Updated: 2018/07/16 23:04:40 by jadawson         ###   ########.fr        #
+#    Updated: 2018/07/16 23:18:02 by jadawson         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,8 @@ PRINTF_SRC = 	ft_printf.c \
 				str_funct_3.c\
 				length_apply.c\
 				flag_apply.c\
-				flag_apply_num_1.c
+				flag_apply_num_1.c\
+				width_iord.c
 PRINTF_OBJ = $(patsubst %.c, %.o, $(PRINTF_SRC))
 
 LIBFT_SRC_DIR = ./libft/
