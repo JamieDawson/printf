@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   flag_apply.c                                       :+:      :+:    :+:   */
+/*   flag_apply_num_1.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jadawson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/16 20:19:01 by jadawson          #+#    #+#             */
-/*   Updated: 2018/07/16 23:06:01 by jadawson         ###   ########.fr       */
+/*   Created: 2018/07/16 22:11:15 by jadawson          #+#    #+#             */
+/*   Updated: 2018/07/16 23:03:37 by jadawson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		flag_apply_str(char *ret, int *bc, t_fwpl *modder)
+int		flag_apply_iord(int id, int len, t_fwpl *modder, int bc)
 {
 	if (modder->flags & minus)
-		precision_str_print(ret, bc, modder);
-	return (*bc);
+	{
+		ft_putnbr_bc(id, &bc);
+		(width_print(len, modder->width, &bc, modder));
+	}
+	return (bc);
 }
-

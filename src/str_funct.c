@@ -6,7 +6,7 @@
 /*   By: jadawson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/26 20:33:33 by jadawson          #+#    #+#             */
-/*   Updated: 2018/07/16 21:47:45 by jadawson         ###   ########.fr       */
+/*   Updated: 2018/07/16 23:09:49 by jadawson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ int		str_print(va_list ap, t_fwpl *modder)
 	i = 0;
 	bc = 0;
 	if (modder->length)
-		return(length_apply(ap, modder));
+		return(length_apply_str(ap, modder));
 	ret = va_arg(ap, char *);
 	if (modder->flags)
-		return(flag_apply(ret, &bc, modder));
+		return(flag_apply_str(ret, &bc, modder));
 	if (!ret)
 		ft_putstr("(null)");
 	ft_putstr_bc(ret, &bc);
@@ -55,11 +55,13 @@ int		iord_funct(va_list ap, t_fwpl *modder)
 	(modder->precision > 0) ? precision_print(len, &bc, modder) : 0;
 	(modder->flags & zero) ? zero_print(len, modder->width, &bc, modder) : 0;
 	if (modder->flags & minus)
-	{
+		return(flag_apply_iord(id, len, modder, bc));
+ /*	{
 		ft_putnbr_bc(id, &bc);
 		width_print(len, modder->width, &bc, modder);
 		return (bc);
 	}
+*/
 	if (modder->width)
 	{
 		width_print(len, modder->width, &bc, modder);
