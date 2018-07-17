@@ -6,7 +6,7 @@
 /*   By: jadawson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/26 20:33:33 by jadawson          #+#    #+#             */
-/*   Updated: 2018/07/16 23:25:21 by jadawson         ###   ########.fr       */
+/*   Updated: 2018/07/16 23:34:58 by jadawson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int		iord_funct(va_list ap, t_fwpl *modder)
 		print_plus_or_space(modder);
 	(modder->precision > 0) ? precision_print(len, &bc, modder) : 0;
 	(modder->flags & zero) ? zero_print(len, modder->width, &bc, modder) : 0;
-	if (modder->flags)
+	if (modder->flags & minus)
 		return(flag_apply_iord(id, len, modder, bc));
 	if (modder->width)
 		return(width_iord_print(id, bc, len, modder));
