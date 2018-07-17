@@ -6,7 +6,7 @@
 /*   By: jadawson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/16 18:21:06 by jadawson          #+#    #+#             */
-/*   Updated: 2018/07/17 14:03:11 by jadawson         ###   ########.fr       */
+/*   Updated: 2018/07/17 14:21:35 by jadawson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,4 @@ int	width_print_str(int str_len, int width_size, int *bc, t_fwpl *modder)
 	}
 	return (*bc);
 }
-
+*/
