@@ -6,12 +6,33 @@
 /*   By: jadawson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/26 20:33:33 by jadawson          #+#    #+#             */
-/*   Updated: 2018/07/17 13:58:59 by jadawson         ###   ########.fr       */
+/*   Updated: 2018/07/17 14:19:12 by jadawson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
+
+int		str_print(va_list ap, t_fwpl *modder)
+{
+	char	*ret;
+	int		bc;
+	int		i;
+
+	i = 0;
+	bc = 0;
+	if (modder->length)
+		return(length_apply_str(ap, modder));
+	ret = va_arg(ap, char *);
+	if (modder->flags)
+		return(flag_apply_str(ret, &bc, modder));
+	if (!ret)
+		ft_putstr("(null)");
+	ft_putstr_bc(ret, &bc);
+	return (bc);
+}
+
+/*
 int		str_print(va_list ap, t_fwpl *modder)
 {
 	char	*ret;
@@ -35,6 +56,7 @@ int		str_print(va_list ap, t_fwpl *modder)
 	ft_putstr_bc(ret, &bc);
 	return (bc);
 }
+*/
 
 int		char_funct(va_list ap, t_fwpl *modder)
 {
