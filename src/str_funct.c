@@ -6,59 +6,30 @@
 /*   By: jadawson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/26 20:33:33 by jadawson          #+#    #+#             */
-/*   Updated: 2018/07/17 15:07:48 by jadawson         ###   ########.fr       */
+/*   Updated: 2018/07/17 15:10:51 by jadawson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-
 int		str_print(va_list ap, t_fwpl *modder)
 {
 	char	*ret;
 	int		bc;
 	int		i;
-	int 	len;
 
 	i = 0;
 	bc = 0;
 	if (modder->length)
 		return(length_apply_str(ap, modder));
 	ret = va_arg(ap, char *);
-	len = ft_strlen(ret);
-	if (modder->flags || modder->width)
-		return(flag_apply_str(ret, &bc, modder));
-	if (!ret)
-		ft_putstr("(null)");
-	ft_putstr_bc(ret, &bc);
-	return (bc);
-}
-
-/*
-int		str_print(va_list ap, t_fwpl *modder)
-{
-	char	*ret;
-	int		bc;
-	int		i;
-	int		len;
-
-	i = 0;
-	bc = 0;
-	len = 0;
-	if (modder->length)
-		return(length_apply_str(ap, modder));
-	ret = va_arg(ap, char *);
-	len = ft_strlen(ret);
 	if (modder->flags)
 		return(flag_apply_str(ret, &bc, modder));
-//	if (modder->width)
-//		width_print_str(len, modder->width, &bc, modder);
 	if (!ret)
 		ft_putstr("(null)");
 	ft_putstr_bc(ret, &bc);
 	return (bc);
 }
-*/
 
 int		char_funct(va_list ap, t_fwpl *modder)
 {
