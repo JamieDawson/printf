@@ -6,7 +6,7 @@
 /*   By: jadawson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/26 20:33:33 by jadawson          #+#    #+#             */
-/*   Updated: 2018/07/13 21:14:07 by jadawson         ###   ########.fr       */
+/*   Updated: 2018/07/16 18:29:29 by jadawson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,10 @@ int		str_print(va_list ap, t_fwpl *modder)
 
 	i = 0;
 	bc = 0;
-	if ((modder->length & l) == l)
-		return (s_wide_funct(ap, modder));
+	//if ((modder->length & l) == l)
+	//	return (s_wide_funct(ap, modder));
+	if (modder->length)
+		length_apply(ap, modder);
 	ret = va_arg(ap, char *);
 	if (modder->flags & minus)
 	{
