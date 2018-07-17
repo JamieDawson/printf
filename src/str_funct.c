@@ -6,7 +6,7 @@
 /*   By: jadawson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/26 20:33:33 by jadawson          #+#    #+#             */
-/*   Updated: 2018/07/17 15:03:38 by jadawson         ###   ########.fr       */
+/*   Updated: 2018/07/17 15:07:48 by jadawson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,6 @@ int		str_print(va_list ap, t_fwpl *modder)
 	len = ft_strlen(ret);
 	if (modder->flags || modder->width)
 		return(flag_apply_str(ret, &bc, modder));
-	//width might break it.
-	//if (modder->width)
-	//	width_print_str(len, modder->width, &bc, modder);
 	if (!ret)
 		ft_putstr("(null)");
 	ft_putstr_bc(ret, &bc);
