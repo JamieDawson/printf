@@ -6,7 +6,7 @@
 /*   By: jadawson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/16 18:21:06 by jadawson          #+#    #+#             */
-/*   Updated: 2018/07/16 22:08:29 by jadawson         ###   ########.fr       */
+/*   Updated: 2018/07/17 12:52:19 by jadawson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,4 +17,17 @@ int		length_apply_str(va_list ap, t_fwpl *modder)
 	if ((modder->length & l) == l)
 		return (s_wide_funct(ap, modder));
 	return (0);
+}
+
+
+int	width_print_str(int str_len, int width_size, int *bc, t_fwpl *modder)
+{
+	while (str_len < width_size)
+	{
+		ft_putchar(' ');
+		str_len++;
+		*bc += 1;
+		modder->width -= 1;
+	}
+	return (*bc);
 }
