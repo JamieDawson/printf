@@ -6,7 +6,7 @@
 /*   By: jadawson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/04 19:54:16 by jadawson          #+#    #+#             */
-/*   Updated: 2018/07/16 18:30:36 by jadawson         ###   ########.fr       */
+/*   Updated: 2018/07/16 20:26:04 by jadawson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,5 +85,5 @@ void			print_plus_or_space(t_fwpl *modder);
 void			ft_putstr_bc(char const *s, int *bc);
 
 int				length_apply(va_list ap, t_fwpl *modder);
-
+int				flag_apply(char *ret, int *bc, t_fwpl *modder);
 #endif
