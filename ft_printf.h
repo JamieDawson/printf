@@ -6,7 +6,7 @@
 /*   By: jadawson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/04 19:54:16 by jadawson          #+#    #+#             */
-/*   Updated: 2018/07/17 12:51:55 by jadawson         ###   ########.fr       */
+/*   Updated: 2018/07/17 22:09:44 by jadawson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,5 +88,6 @@ int				length_apply_str(va_list ap, t_fwpl *modder);
 int				flag_apply_str(char *ret, int *bc, t_fwpl *modder);
 int				flag_apply_iord(int id, int len, t_fwpl *modder, int bc);
 int				width_iord_print(int id, int bc, int len, t_fwpl *modder);
-int				width_print_str(int str_len, int width_size, int *bc, t_fwpl *modder);
+int				width_print_str(int str_len, int width_size,
+						int *bc, t_fwpl *modder);
 #endif

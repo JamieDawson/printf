@@ -6,13 +6,13 @@
 /*   By: jadawson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/16 23:14:50 by jadawson          #+#    #+#             */
-/*   Updated: 2018/07/17 12:49:36 by jadawson         ###   ########.fr       */
+/*   Updated: 2018/07/17 22:16:43 by jadawson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		width_iord_print(int id, int bc, int len,  t_fwpl *modder)
+int		width_iord_print(int id, int bc, int len, t_fwpl *modder)
 {
 	if (modder->width)
 	{
@@ -21,5 +21,4 @@ int		width_iord_print(int id, int bc, int len,  t_fwpl *modder)
 		return (bc);
 	}
 	return (0);
-
 }
