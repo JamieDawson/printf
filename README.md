@@ -1,4 +1,4 @@
-This project is a recreation of the C / C++ command called printf.
+This project is a recreation of the C command called printf. It was a project that I selected from [42 Silicon Valley](https://www.42.us.org/).
 
 With this project, you can recreate the commands that hand printf Flags, width, precision, and length, and type.
 
